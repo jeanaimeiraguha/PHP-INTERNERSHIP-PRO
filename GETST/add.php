@@ -7,8 +7,9 @@
 </head>
 <body>
    <form action="insert.php" method="post">
-     Username<input type="text" name="username"> <br>
-     Password<input type="password" name="password"> <br>
+     id<input type="text" name="id"> <br>
+     username<input type="text" name="username"> <br>
+     address<input type="text" name="address"> <br>
      
 <button name="submit">Add New</button></form>  
 </body>

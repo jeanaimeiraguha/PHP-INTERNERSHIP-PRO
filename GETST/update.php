@@ -13,11 +13,11 @@
     $row=mysqli_fetch_array($select);
     ?> 
      <form action="insert.php" method="post">
-     id<input type="text" name="id"> <br>
-     username<input type="text" name="username"> <br>
-     address<input type="text" name="address"> <br>
+     id<input type="text" name="id" value="<?php echo $row['id']?>"> <br>
+     username<input type="text" name="username" value="<?php echo $row['username']?>"> <br>
+     address<input type="text" name="address" value="<?php echo $row['address']?>"> <br>
      
-<button name="submit">Add New</button></form>  
+<button name="submit">Update</button></form>  
 </body>
 </html>
 
@@ -29,7 +29,7 @@ $id=$_POST['id'];
 $username=$_POST['username'];
 $address=$_POST['address'];
 
-$insert=mysqli_query($conn ,"UPDATE user where id='$id', username='$username', `address`='$address'WHERE id='$id'");
+$update=mysqli_query($conn ,"UPDATE user where id='$id', username='$username', `address`='$address'WHERE id='$id'");
 if ($update) {
      # code...
      // echo "data Inserted successfully";

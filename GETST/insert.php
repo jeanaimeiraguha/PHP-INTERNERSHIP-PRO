@@ -2,11 +2,11 @@
 include 'conn.php';
 if(isset($_POST['submit'])) {
      # code...
-// $id=$_POST['id'];
+$id=$_POST['id'];
 $username=$_POST['username'];
-$password=$_POST['password'];
+$address=$_POST['address'];
 
-$insert=mysqli_query($conn ,"INSERT INTO `users`(id, username, `password`) VALUES('','$username','$password')");
+$insert=mysqli_query($conn ,"INSERT INTO `user`(id, username, `address`) VALUES('$id','$username','$address')");
 if ($insert) {
      # code...
      echo "data Inserted successfully";

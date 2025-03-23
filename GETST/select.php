@@ -23,7 +23,7 @@
           <td><?php echo $row['id']?></td>
           <td><?php echo $row['username']?></td>
           <td><?php echo $row['address']?></td>
-          <td><a href="#">Delete</a></td>
+          <td><a href="delete.php?id=<?php echo $row['id']?>">Delete</a></td>
           <td><a href="#">Update</a></td>
      </tr>
      <?php

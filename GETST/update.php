@@ -8,7 +8,10 @@
 <body>
     <?php
     include('conn.php');
-    $id=$_GET['id'];
+    if (isset($_GET['id'])) {
+     # code...
+    }
+    
     $select=mysqli_query($conn,"SELECT * FROM user WHERE id='$id'");
     $row=mysqli_fetch_array($select);
     ?> 

@@ -6,26 +6,29 @@
      <title>Document</title>
 </head>
 <body>
-    <table border="1">
+   <table border="1">
      <tr>
-          <th>ID</th>
+          <th>Id</th>
           <th>UserName</th>
-          <th>Address</th>
+          <th>Adress</th>
           <th colspan="2">Actions</th>
      </tr>
      <?php
-   include('conn.php');
-   $select =mysqli_query($conn , "SELECT * FROM users");
-   while($row=mysqli_fetch_array($select)){
-   ?>
+     include( 'conn.php');
+     $select=mysqli_query($conn ,"SELECT * FROM user");
+     while($row=mysqli_fetch_array($select)){
+     
+     ?>
      <tr>
           <td><?php echo $row['id']?></td>
           <td><?php echo $row['username']?></td>
           <td><?php echo $row['address']?></td>
+          <td><a href="#">Delete</a></td>
+          <td><a href="#">Update</a></td>
      </tr>
      <?php
      }
      ?>
-    </table> 
+   </table>  
 </body>
 </html>

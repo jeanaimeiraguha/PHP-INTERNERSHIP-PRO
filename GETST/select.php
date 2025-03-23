@@ -24,7 +24,7 @@
           <td><?php echo $row['username']?></td>
           <td><?php echo $row['address']?></td>
           <td><a href="delete.php?id=<?php echo $row['id']?>">Delete</a></td>
-          <td><a href="#">Update</a></td>
+          <td><a href="update.php?id=<?php echo $row['id']?>">Update</a></td>
      </tr>
      <?php
      }

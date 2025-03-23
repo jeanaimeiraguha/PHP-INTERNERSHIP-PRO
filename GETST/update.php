@@ -12,7 +12,7 @@
     $select=mysqli_query($conn,"SELECT * FROM user WHERE id='$id'");
     $row=mysqli_fetch_array($select);
     ?> 
-     <form action="insert.php" method="post">
+     <form action="" method="post">
      id<input type="text" name="id" value="<?php echo $row['id']?>"> <br>
      username<input type="text" name="username" value="<?php echo $row['username']?>"> <br>
      address<input type="text" name="address" value="<?php echo $row['address']?>"> <br>
